@@ -8,4 +8,4 @@ function minimalni($a, $b) {
 
 }
 
-minimalni(5,4);
+echo minimalni(5,4);
