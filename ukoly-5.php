@@ -1,6 +1,6 @@
 <?php
-function retrieve($a, $b) {
-    if (is_numberic($a) and is_numeric($b)) {
+function minimalni($a, $b) {
+    if (is_numeric($a) and is_numeric($b)) {
         return min($a, $b);
     }   else {
         return false;
@@ -8,4 +8,4 @@ function retrieve($a, $b) {
 
 }
 
-retrieve(5,4);
+minimalni(5,4);
