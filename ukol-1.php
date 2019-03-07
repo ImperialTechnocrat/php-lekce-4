@@ -7,4 +7,9 @@ if ($handle === false) {
 }   else {
     fwrite($handle, date('Y-m-d H:i:s') . "<br>\n");
 }
-echo fread($handle, 1000);
+$handle = fopen("pristupy.txt",  "r");
+if ($handle === false) {
+    echo "File cannot be opened";
+}   else {
+    echo fread($handle, 1000);
+}
