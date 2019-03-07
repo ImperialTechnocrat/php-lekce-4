@@ -25,7 +25,7 @@
 
         <?php
 
-        $handle = fopen('objednavky.csv', 'r');
+        $handle = fopen('C:\Users\juand\PhpstormProjects\php-lekce-4\objednavky.csv', 'r');
         if ($handle) {
             while (($line = fgets($handle, 4096)) !== false) {
 
