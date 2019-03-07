@@ -22,14 +22,28 @@
                 <th>Celková cena</th>
             </tr>
         </thead>
-        <tr>
-            <td>123</td>
-            <td>Josef</td>
-            <td>1.1.2000</td>
-            <td>0 Kč</td>
-        </tr>
+
+        <?php
+
+        $handle = fopen('objednavky.csv', 'r');
+        if ($handle) {
+            while (($line = fgets($handle, 4096)) !== false) {
+
+                $exploded = explode(';', $line);
+
+                foreach ($exploded as $item) {
+                    echo "<tr>
+                    <td><$item</td>;
+                    <td><$item</td>;
+                    <td<>$item</td>;
+                    <td><$item</td>;
+                    </tr>}";
+                    }
+            }
+        }
+        ?>
     </table>
+    }
 </div>
 </body>
 </html>
-
