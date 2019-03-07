@@ -9,5 +9,5 @@ function maximum($a, $b) {
 }
 
 maximum(3,6);
-    maximum(305, 421);
-    maximum('x', 55);
+maximum(305, 421);
+maximum('x', 55);
