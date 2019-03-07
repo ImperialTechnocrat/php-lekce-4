@@ -1,7 +1,7 @@
 <?php
 function maximum($a, $b) {
     if (is_numeric($a) and is_numeric($b)) {
-        echo max($a, $b);
+        echo max($a, $b) . '<br>';
 }   else {
         echo "Neobsahuje cislo";
     }
