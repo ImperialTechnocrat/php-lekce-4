@@ -8,4 +8,12 @@ function minimalni($a, $b) {
 
 }
 
-echo minimalni(5,4);
+
+
+
+
+if(minimalni(3,5)) {
+    echo 'chyba';
+}   else {
+    echo minimalni(3,5);
+}
