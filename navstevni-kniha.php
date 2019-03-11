@@ -14,13 +14,11 @@
 <div class="container">
 
 
-    <form method="POST">
+    <form action="/action_page.php" method = "post">
     Jméno: <input type="text"name="firstName"><br>
     Heslo: <input type="password"name="secret"><br>
     <input type="checkbox"name="optIn"> Souhlasím<br>
     <input type="submit"><br>
-    </form>
-    <form action="/action_page.php">
         <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
         <br>
         <input type="submit">
