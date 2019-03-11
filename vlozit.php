@@ -6,3 +6,4 @@ echo $semicolonSeparation;
 fwrite($handle, $semicolonSeparation);
 echo "Uspesne ulozeno";
 echo '<br><a href="navstevni-kniha.php">Navstevni kniha</a>';
+fclose($handle);

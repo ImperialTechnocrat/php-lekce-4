@@ -23,7 +23,8 @@
     <?php
     var_dump($_POST);
     $handle = fopen('prispevky.txt,', 'r') or die("Unable to open file");
-    echo $handle;
+    echo fread($handle, filesize('prispeky.txt'))
+
     ?>
 
 </div>
