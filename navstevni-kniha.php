@@ -22,9 +22,21 @@
     </form>
     <?php
     var_dump($_POST);
-    $handle = fopen('objednavky.csv,', 'r') or die("Unable to open file");
-    echo fread($handle, filesize('objednavky.csv'));
-    fclose($handle);
+        $handle = fopen('objednavky.csv', 'r');
+        if ($handle) {
+            while (($line = fgets($handle, 4096)) !== false) {
+                $row = explode(';', $line);
+                ?>
+    <tr>
+        <td><?php echo $row[0]; ?></td>
+        <td><?php echo $row[3]; ?></td>
+        <td><?php echo $row[2]; ?></td>
+        <td><?php echo $row[1]; ?> Kč</td>
+    </tr>
+    <?php
+    }
+    }
+    ?>
 
     ?>
 
