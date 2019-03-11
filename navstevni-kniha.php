@@ -14,6 +14,7 @@
 <div class="container">
 
 
+
     <form action="vlozit.php" method = "post">
     Jméno: <input type="Jmeno"name="firstName"><br>
         <textarea type = "Vzkaz" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
@@ -27,6 +28,8 @@
         echo "File cannot be opened";
     }   else {
         echo fread($handle, 1000);
+        
+
     }
 
 
