@@ -15,35 +15,32 @@
     <h1>Seznam objednávek</h1>
     <table class="table table-bordered">
         <thead>
-            <tr>
-                <th>Číslo objednávky</th>
-                <th>Jméno zákazníka</th>
-                <th>Datum vytvoření objednávky</th>
-                <th>Celková cena</th>
-            </tr>
+        <tr>
+            <th>Číslo objednávky</th>
+            <th>Jméno zákazníka</th>
+            <th>Datum vytvoření objednávky</th>
+            <th>Celková cena</th>
+        </tr>
         </thead>
 
         <?php
-
-        $handle = fopen('C:\Users\juand\PhpstormProjects\php-lekce-4\objednavky.csv', 'r');
+        $handle = fopen('objednavky.csv', 'r');
         if ($handle) {
             while (($line = fgets($handle, 4096)) !== false) {
-
-                $exploded = explode(';', $line);
-
-                foreach ($exploded as $item) {
-                    echo "<tr>
-                    <td><$item</td>;
-                    <td><$item</td>;
-                    <td<>$item</td>;
-                    <td><$item</td>;
-                    </tr>}";
-                    }
+                $row = explode(';', $line);
+                ?>
+                <tr>
+                    <td><?php echo $row[0]; ?></td>
+                    <td><?php echo $row[3]; ?></td>
+                    <td><?php echo $row[2]; ?></td>
+                    <td><?php echo $row[1]; ?> Kč</td>
+                </tr>
+                <?php
             }
         }
         ?>
+
     </table>
-    }
 </div>
 </body>
 </html>
