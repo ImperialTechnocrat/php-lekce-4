@@ -15,9 +15,8 @@
 
 
     <form action="vlozit.php" method = "post">
-    Jméno: <input type="text"name="firstName"><br>
-    Heslo: <input type="password"name="secret"><br>
-        <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+    Jméno: <input type="Jmeno"name="firstName"><br>
+        <textarea type = "Vzkaz" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
         <br>
         <input type="submit">
     </form>
