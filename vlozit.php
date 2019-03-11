@@ -5,7 +5,7 @@ $handle = fopen("prispevky.txt",  "a");
 if ($handle === false) {
     echo "File cannot be opened";
 }   else {
-    fwrite($handle, $inputtedText . "|" . "<br>\n");
+    fwrite($handle, $inputtedText . "|");
 }
 $handle = fopen("prispevky.txt",  "r");
 if ($handle === false) {
