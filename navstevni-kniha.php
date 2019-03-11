@@ -22,7 +22,7 @@
     </form>
     <?php
     var_dump($_POST);
-        $handle = fopen('objednavky.csv', 'r');
+        $handle = fopen('prispevky.txt', 'r');
         if ($handle) {
             while (($line = fgets($handle, 4096)) !== false) {
                 $row = explode(';', $line);
