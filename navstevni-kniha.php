@@ -22,11 +22,11 @@
     </form>
     <?php
     var_dump($_POST);
-        $handle = fopen('prispevky.txt', 'r');
-        if ($handle) {
-            echo implode(" ",$handle);
-        }
-
+    if ($handle === false) {
+        echo "File cannot be opened";
+    }   else {
+        echo fread($handle, 1000);
+    }
 
     ?>
 
