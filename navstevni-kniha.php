@@ -14,7 +14,7 @@
 <div class="container">
 
 
-    <form action="/navstevni-kniha.php" method = "post">
+    <form action="/vlozit.php.php" method = "post">
     Jméno: <input type="text"name="firstName"><br>
     Heslo: <input type="password"name="secret"><br>
     <input type="checkbox"name="optIn"> Souhlasím<br>
