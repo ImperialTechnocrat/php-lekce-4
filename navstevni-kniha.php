@@ -27,10 +27,6 @@
         echo "File cannot be opened";
     }   else {
         echo fread($handle, 1000);
-        while (($line = fgets($handle, 4096)) !== false) {
-            $row = explode('|', $line);
-            echo $row;
-        }
     }
 
 
