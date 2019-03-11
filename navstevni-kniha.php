@@ -22,6 +22,7 @@
     </form>
     <?php
     var_dump($_POST);
+    $handle = fopen("prispevky.txt",  "r");
     if ($handle === false) {
         echo "File cannot be opened";
     }   else {
