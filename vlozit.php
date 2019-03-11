@@ -1,11 +1,11 @@
 <?php
 echo 'Historie přístupů:<br>';
-$inputtedText = implode(" ", $_POST);
+$inputtedText = implode(": ", $_POST);
 $handle = fopen("prispevky.txt",  "a");
 if ($handle === false) {
     echo "File cannot be opened";
 }   else {
-    fwrite($handle, $inputtedText . "<br>\n");
+    fwrite($handle, $inputtedText . "|" . "<br>\n");
 }
 $handle = fopen("prispevky.txt",  "r");
 if ($handle === false) {
