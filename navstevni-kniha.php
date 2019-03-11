@@ -24,10 +24,7 @@
     var_dump($_POST);
         $handle = fopen('prispevky.txt', 'r');
         if ($handle) {
-            while (($line = fgets($handle, 4096)) !== false) {
-                $row = explode(';', $line);
-                echo $row;
-            }
+            echo implode(" ",$handle);
         }
 
 
