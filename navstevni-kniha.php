@@ -26,17 +26,10 @@
         if ($handle) {
             while (($line = fgets($handle, 4096)) !== false) {
                 $row = explode(';', $line);
-                ?>
-    <tr>
-        <td><?php echo $row[0]; ?></td>
-        <td><?php echo $row[3]; ?></td>
-        <td><?php echo $row[2]; ?></td>
-        <td><?php echo $row[1]; ?> Kč</td>
-    </tr>
-    <?php
-    }
-    }
-    ?>
+                echo $row;
+            }
+        }
+
 
     ?>
 
