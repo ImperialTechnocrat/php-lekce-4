@@ -22,12 +22,17 @@
         <input type="submit">
     </form>
     <?php
-    var_dump($_POST);
     $handle = fopen("prispevky.txt",  "r");
     if ($handle === false) {
         echo "File cannot be opened";
     }   else {
-        echo fread($handle, 1000);
+        $text = fread($handle, 1000);
+        $asArray = explode("|", $text);
+        $poradi = sizeof($asArray) - 1;
+        for ($i = $poradi; $i >= 0; $i--) {
+            echo $asArray[$i];
+        }
+
         
 
     }
