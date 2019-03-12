@@ -17,7 +17,7 @@
 
     <form action="vlozit.php" method = "post">
     Jméno: <input type="Jmeno"name="firstName"><br>
-        <textarea type = "Vzkaz" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+    Vzkaz: <textarea type = "Vzkaz" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
         <br>
         <input type="submit">
     </form>
@@ -30,7 +30,8 @@
         $asArray = explode("|", $text);
         $poradi = sizeof($asArray) - 1;
         for ($i = $poradi; $i >= 0; $i--) {
-            echo $asArray[$i];
+            $bolding = explode(":", $asArray[$i]);
+            echo "<b>" . $bolding[0] . "</b>" . $bolding[1] . "<br/>";
         }
 
         
