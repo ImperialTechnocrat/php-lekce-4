@@ -16,11 +16,18 @@
 
 
     <form action="vlozit.php" method = "post">
-    Jméno: <input type="Jmeno"name="firstName"><br>
-    Vzkaz: <textarea type = "Vzkaz" name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
-        <br>
-        <input type="submit">
+        <div class="form-group">
+            <label for="jmeno">Jmeno:</label>
+            <br><input type="text" id="jmeno" name="Jmeno"">
+        </div>
+        <div class="form-group">
+            <label for="vzkaz">Vzkaz</label>
+            <br><textarea type = "Vzkaz" name="message" id="vzkaz" rows="3" cols="30"></textarea>
+            <br>
+        </div>
+        <button type="submit" class="btn btn-primary">Vložit</button>
     </form>
+
     <?php
     $handle = fopen("prispevky.txt",  "r");
     if ($handle === false) {
@@ -28,10 +35,10 @@
     }   else {
         $text = fread($handle, 1000);
         $asArray = explode("|", $text);
-        $poradi = sizeof($asArray) - 1;
+        $poradi = sizeof($asArray) - 2;
         for ($i = $poradi; $i >= 0; $i--) {
             $bolding = explode(":", $asArray[$i]);
-            echo "<b>" . $bolding[0] . "</b>" . $bolding[1] . "<br/>";
+            echo "<b>" . $bolding[0] . "</b>" . "<br/>" . $bolding[1] . "<br/>";
         }
 
         
