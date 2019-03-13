@@ -1,5 +1,4 @@
 <?php
-echo 'Historie přístupů:<br>';
 $inputtedText = implode(": ", $_POST);
 $handle = fopen("prispevky.txt",  "a");
 if ($handle === false) {
@@ -11,7 +10,7 @@ $handle = fopen("prispevky.txt",  "r");
 if ($handle === false) {
     echo "File cannot be opened";
 }   else {
-    echo fread($handle, 1000);
+    echo "Vzkaz ulozen";
 }
 echo '<br><a href="navstevni-kniha.php">Navstevni kniha</a>';
 fclose($handle);
